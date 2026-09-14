@@ -260,7 +260,7 @@ def compose_fit(size=(1920, 1080)):
 
 def compose(mode, size=None):
     """按模式名合成壁纸: mode ∈ {grid, single1..}。
-    本套件 GRID_SINGLE=True: grid 按 GRID_FIT 决定是 完整卡片 还是 全屏 cover;
+    本套件 GRID_SINGLE=True: grid 默认走 cover 铺满(GRID_FIT=True 时改为完整卡片);
     single1 = 全屏 cover。"""
     size = tuple(size) if size else screen_size()
     if mode == "grid":
