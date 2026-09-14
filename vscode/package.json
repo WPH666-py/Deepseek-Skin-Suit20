@@ -1,0 +1,88 @@
+{
+  "name": "deepskin-suit20",
+  "displayName": "DeepSkin Suit20 — 大肥鱼皮肤",
+  "description": "DeepSeek 蓝色大肥鱼皮肤套件20: 全屏铺满(cover)壁纸一键切换 · 桌面桌宠 · 多 IDE 皮肤素材",
+  "version": "0.1.0",
+  "publisher": "wp666",
+  "license": "MIT",
+  "icon": "media/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WPH666-py/Deepseek-Skin-Suit20.git"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other",
+    "Themes"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "deepskin20.setGrid",
+        "title": "大肥鱼20: 全屏铺满(cover)"
+      },
+      {
+        "command": "deepskin20.setSingle1",
+        "title": "大肥鱼20: 卡片单图(模糊填充)"
+      },
+      {
+        "command": "deepskin20.setRandom",
+        "title": "大肥鱼20: 随机换一张"
+      },
+      {
+        "command": "deepskin20.openSwitcher",
+        "title": "大肥鱼20: 打开皮肤切换器"
+      },
+      {
+        "command": "deepskin20.startPet",
+        "title": "大肥鱼20: 启动桌宠"
+      },
+      {
+        "command": "deepskin20.openGallery",
+        "title": "大肥鱼20: 打开素材画廊"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "deepskin20",
+          "title": "大肥鱼20",
+          "icon": "media/deepskin.svg"
+        }
+      ]
+    },
+    "views": {
+      "deepskin20": [
+        {
+          "id": "deepskin20.gallery",
+          "name": "皮肤画廊",
+          "type": "webview"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "DeepSkin Suit20",
+      "properties": {
+        "deepskin20.repoPath": {
+          "type": "string",
+          "default": "",
+          "description": "皮肤套件20仓库路径(含 tools/wallpaper.py)。留空则自动检测 ~/.deepskin-suit20 或 %USERPROFILE%\\DeepSkin-Suit20。"
+        },
+        "deepskin20.pythonPath": {
+          "type": "string",
+          "default": "",
+          "description": "Python 解释器路径, 留空自动查找(需要 pip 已装 Pillow, 缺失时扩展会自动安装)。"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "node -e \"console.log('no build step')\""
+  }
+}

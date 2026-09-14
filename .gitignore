@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+node_modules/
+.python/
+.deepskin/
+*.log
+
+# 打包中间产物(正式 vsix 随仓库提交)
+*.vsix.tmp
+.vscodeignore.bak
